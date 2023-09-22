@@ -6,6 +6,8 @@ background-color: #fff;
 
 ul {
 list-style: none;
+padding-left: 0;
+margin: 0;
 }
 
 a {
@@ -16,7 +18,35 @@ address {
 font-style: normal;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+margin-top: 0;
+margin-bottom: 0;
+}
+
+img {
+display: block;
+}
+
+.container {
+width: 100%;
+max-width: 1158px;
+padding: 0 15px;
+margin: 0 auto;
+outline: 2px solid red;
+}
+
 /** ========== Header ========== **/
+
+.header {
+border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
+background: var(--WHITE, #FFF);
+padding-top: 24px;
+padding-bottom: 24px;
+}
+
+.header-container {
+display: flex;
+}
 
 .logo {
     color: #4d5ae5;
@@ -26,10 +56,22 @@ font-style: normal;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
 .logo-black {
     color: #2e2f42;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list {
+    display: flex;
+    gap: 40px;
 }
 
 .navigation-link {
@@ -38,6 +80,12 @@ font-style: normal;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+.address-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .navigation-link:active, .navigation-link:hover, .navigation-link:focus {
@@ -60,6 +108,8 @@ color: var(--OCEAN, #404BBF);
 
 .banner {
 background: var(--NAVY-BLUE, #2E2F42);
+padding-top: 188px;
+padding-bottom: 188px;
 }
 
 .header-banner {
@@ -69,6 +119,7 @@ background: var(--NAVY-BLUE, #2E2F42);
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    margin-bottom: 48px;
 }
 
 .banner-btn {
@@ -79,11 +130,11 @@ font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.04em;
 cursor: pointer;
-background-color: #4D5AE5
+background-color: #4D5AE5;
 }
 
 .banner-btn:active, .banner-btn:hover, .banner-btn:focus {
-    background-color: #404BBF
+    background-color: #404BBF;
 }
 
 /** ================================= **/
@@ -91,6 +142,8 @@ background-color: #4D5AE5
 
 .strengths {
 background: #FFFFFF;
+padding-top: 120px;
+padding-bottom: 120px;
 }
 
 .strengths-list-header {
@@ -100,6 +153,7 @@ background: #FFFFFF;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: left;
+    margin-bottom: 8px;
 }
 
 .strengths-list-text {
@@ -114,6 +168,8 @@ background: #FFFFFF;
 
 .team {
 background: var(--CLOUD, #F4F4FD);
+padding-top: 120px;
+padding-bottom: 120px;
 }
 
 .team-header {
@@ -124,10 +180,18 @@ background: var(--CLOUD, #F4F4FD);
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .team-list-item {
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    padding-bottom: 32px;
+}
+
+.team-list-photo {
+    margin-bottom: 32px;
 }
 
 .team-list-name {
@@ -137,6 +201,7 @@ background: var(--CLOUD, #F4F4FD);
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .team-list-text {
@@ -151,6 +216,8 @@ background: var(--CLOUD, #F4F4FD);
 
 .portfolio {
 background: #FFFFFF;
+padding-top: 120px;
+padding-bottom: 120px;
 }
 
 .portfolio-header {
@@ -161,6 +228,23 @@ background: #FFFFFF;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.portfolio-list-item {
+    border: 1px solid var(--CORNFLOWER, #E7E9FC);
+    background: var(--WHITE, #FFF);
+    padding-bottom: 32px;
+    text-align: start;
+}
+
+.portfolio-list-content {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.portfolio-list-photo {
+    margin-bottom: 32px;
 }
 
 .portfolio-list-header {
@@ -169,6 +253,7 @@ font-size: 20px;
 font-weight: 500;
 line-height: 1.2; 
 letter-spacing: 0.02em;
+margin-bottom: 8px;
 }
 
 .portfolio-list-text {
@@ -182,6 +267,8 @@ letter-spacing: 0.02em;
 
 .footer {
 background: var(--NAVY-BLUE, #2E2F42);
+padding-top: 101.5px;
+padding-bottom: 100px;
 }
 
 .logo-footer {
@@ -199,10 +286,12 @@ color: #f4f4fd;
 }
 
 .footer-text {
+    margin-top: 17.5px;
     color: var(--CLOUD, #F4F4FD);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    max-width: 264px;
 }
 
 /** ================================= **/
