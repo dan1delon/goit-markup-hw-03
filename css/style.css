@@ -25,6 +25,8 @@ margin-bottom: 0;
 
 img {
 display: block;
+max-width: 100%;
+height: auto;
 }
 
 .container {
@@ -32,7 +34,20 @@ width: 100%;
 max-width: 1158px;
 padding: 0 15px;
 margin: 0 auto;
-outline: 2px solid red;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /** ========== Header ========== **/
@@ -126,7 +141,10 @@ padding-bottom: 188px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     margin-bottom: 48px;
-    width: 496px;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .banner-btn {
@@ -139,8 +157,12 @@ letter-spacing: 0.04em;
 cursor: pointer;
 background-color: #4D5AE5;
 border-radius: 4px;
+border: none;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 padding: 16px 32px;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
 .banner-btn:active, .banner-btn:hover, .banner-btn:focus {
@@ -154,6 +176,15 @@ padding: 16px 32px;
 background: #FFFFFF;
 padding-top: 120px;
 padding-bottom: 120px;
+}
+
+.strengths-list {
+    display: flex;
+    gap: 24px;
+}
+
+.strengths-list-item{
+    width: calc((100% - 72px) / 4);
 }
 
 .strengths-list-header {
@@ -193,11 +224,17 @@ padding-bottom: 120px;
     margin-bottom: 72px;
 }
 
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+
 .team-list-item {
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     padding-bottom: 32px;
+    width: calc((100% - 72px) / 4);
 }
 
 .team-list-photo {
@@ -241,22 +278,24 @@ padding-bottom: 120px;
     margin-bottom: 72px;
 }
 
+.portfolio-list {
+    display: flex;
+    gap: 48px 24px;
+    flex-wrap: wrap;
+}
+
 .portfolio-list-item {
-    border: 1px solid var(--CORNFLOWER, #E7E9FC);
     background: var(--WHITE, #FFF);
-    padding-bottom: 32px;
     text-align: start;
+    width: calc((100% - 48px) / 3);
 }
 
 .portfolio-list-content {
-    padding-right: 16px;
-    padding-left: 16px;
+    padding: 32px 16px;
+    border: 1px solid var(--CORNFLOWER, #E7E9FC);
+    border-top: none;
 }
-
-.portfolio-list-photo {
-    margin-bottom: 32px;
-}
-
+                    
 .portfolio-list-header {
 color: #2E2F42;
 font-size: 20px;
@@ -289,6 +328,7 @@ padding-bottom: 100px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    width: 115px;
 }
 
 .logo-white {
