@@ -71,7 +71,8 @@ display: flex;
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    margin-right: 76px
+    margin-right: 76px;
+    padding: 24px 0;
 }
 
 .logo-black {
@@ -86,10 +87,6 @@ display: flex;
 .navigation-list {
     display: flex;
     gap: 40px;
-}
-
-.navigation-item {
-    padding: 24px 0;
 }
 
 .navigation-link {
