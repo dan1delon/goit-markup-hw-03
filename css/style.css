@@ -55,8 +55,6 @@ margin: 0 auto;
 .header {
 border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
 background: var(--WHITE, #FFF);
-padding-top: 24px;
-padding-bottom: 24px;
 }
 
 .header-container {
@@ -73,6 +71,7 @@ display: flex;
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    margin-right: 76px
 }
 
 .logo-black {
@@ -82,12 +81,15 @@ display: flex;
 .navigation {
     display: flex;
     align-items: center;
-    gap: 76px;
 }
 
 .navigation-list {
     display: flex;
     gap: 40px;
+}
+
+.navigation-item {
+    padding: 24px 0;
 }
 
 .navigation-link {
@@ -160,6 +162,7 @@ border-radius: 4px;
 border: none;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 padding: 16px 32px;
+min-width: 169px;
 display: block;
 margin-left: auto;
 margin-right: auto;
@@ -233,12 +236,11 @@ padding-bottom: 120px;
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    padding-bottom: 32px;
     width: calc((100% - 72px) / 4);
 }
 
-.team-list-photo {
-    margin-bottom: 32px;
+.team-list-container {
+padding: 32px 0;
 }
 
 .team-list-name {
@@ -316,8 +318,8 @@ margin-bottom: 8px;
 
 .footer {
 background: var(--NAVY-BLUE, #2E2F42);
-padding-top: 101.5px;
-padding-bottom: 100px;
+padding: 100px 0;
+
 }
 
 .logo-footer {
@@ -329,6 +331,8 @@ padding-bottom: 100px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     width: 115px;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .logo-white {
@@ -336,7 +340,6 @@ color: #f4f4fd;
 }
 
 .footer-text {
-    margin-top: 17.5px;
     color: var(--CLOUD, #F4F4FD);
     font-size: 16px;
     line-height: 1.5;
